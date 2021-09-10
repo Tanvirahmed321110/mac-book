@@ -48,11 +48,11 @@
                  <article class="3">
                      <div class="stroage">
                          <h2 class="text-3xl mt-10 font-medium">Storage</h2>
-                         <button class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-red-700 border-2 border-gray-400 rounded"  type="button">256 GB SSD Storage</button>
+                         <button id="stroage-btn212" class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-red-700 border-2 border-gray-400 rounded"  type="button">256 GB SSD Storage</button>
 
-                         <button class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-red-700 border-2 border-gray-400 rounded" type="button">512 GB SSD Storage</button>
+                         <button id="stroage-btn556" class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-red-700 border-2 border-gray-400 rounded" type="button">512 GB SSD Storage</button>
 
-                         <button class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-red-700 border-2 border-gray-400 rounded" type="button">1TB SSD Storage</button>
+                         <button id="stroage-btn1tb" class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-red-700 border-2 border-gray-400 rounded" type="button">1TB SSD Storage</button>
                      </div>
                  </article>
 
@@ -60,9 +60,9 @@
                  <article class="4">
                      <div class="delivary">
                          <h2 class="text-3xl mt-10 font-medium">Choose Your Delivary Option</h2>
-                          <button class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-gray-700 border-2 border-gray-400 rounded" type="button">2021 Dec Until Free Prime Delivary </button> 
+                          <button id="delivary-free-btn" class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-gray-700 border-2 border-gray-400 rounded" type="button">2021 Dec Until Free Prime Delivary </button> 
 
-                          <button class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-gray-700 border-2 border-gray-400 rounded" type="button">2021 Dec After Delivary charge 10$</button>    
+                          <button id="delivary-charge-btn" class="font-semibold  hover:border-green-900 p-1 px-2  mt-2 hover:text-white hover:bg-gray-700 border-2 border-gray-400 rounded" type="button">2021 Dec After Delivary charge 10$</button>    
                      </div>
                  </article>
 
@@ -73,12 +73,12 @@
 
                          <h2 class="font-medium pt-2">Extra Memory Cost <span id= "display-memory" class="ml-2 pl-16">0$</span></h2><hr>
 
-                         <h2 class="font-medium pt-2" >Extra Storage Cost <span class="pl-20">0$</span></h2><hr>
+                         <h2  class="font-medium pt-2" >Extra Storage Cost <span id="display-stroage" class="pl-20">0$</span></h2><hr>
 
-                         <h2 class=" font-medium pt-2">Delivary Charge<span class="pl-28 ml-1">0$</span></h2><hr>
+                         <h2 class=" font-medium pt-2">Delivary Charge<span id="display-delivary" class="pl-28 ml-1">0$</span></h2><hr>
 
                       <div class="hr2 total mt-2">
-                          <h2 class="text-2xl font-bold mt-2">Total Price <span class="pl-32">1200$</span></h2><hr>
+                          <h2 class="text-2xl font-bold mt-2">Total Price <span id="sub-total" class="pl-32">1200$</span></h2><hr>
                       </div>   
                      </div>
                  </article>
@@ -87,8 +87,8 @@
                  <article class="6 m-0 p-0">
                     <div class="font-medium copon-code mt-2">
                        <h2 class="text-lg font-medium">Add Copon Code</h2>
-                       <input class="hover:bg-gray-500 text-white px-2 p-1 border border-4 border-gray-900 rounded "  type="text" placeholder="Give copon code">
-                       <button class="font-medium bg-red-600 text-white hover:bg-gray-800 p-1.5 px-3 rounded" type="submit">Apply</button>
+                       <input id="copon-code" class="hover:bg-gray-500 text-white px-2 p-1 border border-4 border-gray-900 rounded "  type="text" placeholder="Give copon code">
+                       <button id="copon-code-btn" class="font-medium bg-red-600 text-white hover:bg-gray-800 p-1.5 px-3 rounded" type="submit">Apply</button>
                     </div>
                  </article>
 
@@ -100,7 +100,7 @@
 
       <section class=" ">
          <div class=" hr3 Total">
-           <h2 class="text-4xl pt-8 pb-10 text-center  p-2 text-black font-bold">Total 1200$</h2>
+           <h2 class="text-4xl pt-8 pb-10 text-center  p-2 text-black font-bold">Total <span id="final-total">1200$</span></h2>
          </div>
       </section>
   </main>
