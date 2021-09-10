@@ -7,7 +7,7 @@ document.getElementById('memory8-btn').addEventListener('click',function(){
     displayMemory8.innerText='0$'
     // console.log(displayMemory8)
    
-    subTotalMinus('sub-total','display-memory')
+    subTotal('sub-total','display-stroage','display-memory','display-delivary',00)
 })
 
  document.getElementById('memory-btn').addEventListener('click',function(){
@@ -16,8 +16,8 @@ document.getElementById('memory8-btn').addEventListener('click',function(){
     const displayAmount=parseInt(displayMemoryInnerText)
     displayMemory.innerText=20
     
-    subTotal('sub-total','display-memory',20)
- })
+    subTotal('sub-total','display-stroage','display-memory','display-delivary',20)
+})
 
  //stroage
  function stroage(giveId,price){
@@ -35,75 +35,71 @@ document.getElementById('memory8-btn').addEventListener('click',function(){
  document.getElementById('stroage-btn556').addEventListener('click',function(){
      stroage('display-stroage',25)
      //subtotal add
-     subTotal('sub-total','display-stroage',25)
+     subTotal('sub-total','display-stroage','display-memory','display-delivary',25)
+
  })
  //stroage btn1tb
  document.getElementById('stroage-btn1tb').addEventListener('click',function(){
      stroage('display-stroage',35)
      // subtotal add
-     subTotal('sub-total','display-stroage',35)
+     subTotal('sub-total','display-stroage','display-memory','display-delivary',25)
  })
 
 
  //delivary free
  document.getElementById('delivary-free-btn').addEventListener('click',function(){
      stroage('display-delivary',00)
+     subTotal('sub-total','display-stroage','display-memory','display-delivary', 00 )
  })
  //delivary charge
  document.getElementById('delivary-charge-btn').addEventListener('click',function(){
      stroage('display-delivary',10)
      //subtotal-add
-     subTotal('sub-total','display-delivary',8)
+     subTotal('sub-total','display-stroage','display-memory','display-delivary', 10 )
 
  })
 
 
  // subtotal total add
- function subTotal(idsubTotal,addId,price){
+ function subTotal(idsubTotal,addId,addId2,addId3){
      const add=document.getElementById(addId)
      const addInnerText=add.innerText
      const addParseInt=parseInt(addInnerText)
      add.innerText=addParseInt
 
+     
+     const addid2=document.getElementById(addId2)
+     const addid2InnerText=addId2.innerText
+     const addid2ParseInt=parseInt(addid2InnerText)
+     addId2.innerText=addid2ParseInt
+
+     const addid3=document.getElementById(addId3)
+     const addid3InnerText=addId3.innerText
+     const addid3ParseInt=parseInt(addid3InnerText)
+     addId3.innerText=addid3ParseInt
+
+     
      const subTotal=document.getElementById(idsubTotal)
      const totalInnerText=subTotal.innerText
      let totalParseInt=parseInt(totalInnerText)
-     totalParseInt=price+totalParseInt
-    //  const addTotal=addParseInt+totalParseInt
-     return   subTotal.innerText=totalParseInt
-
-
- }
-
-
- // minus 
- function subTotalMinus(idsubTotal,displayMemory){
-    const add=document.getElementById(displayMemory)
-    const addInnerText=add.innerText
-    const addParseInt=parseInt(addInnerText)
-    add.innerText=addParseInt
-
+    //  subTotal.innerText=totalParseInt
     
-    const subTotal=document.getElementById(idsubTotal)
-    const totalInnerText=subTotal.innerText
-    let totalParseInt=parseInt(totalInnerText)
-    totalParseInt=totalParseInt-addParseInt
-   //  const addTotal=addParseInt+totalParseInt
-    return   subTotal.innerText=totalParseInt
+     return     subTotal.innerText=subTotal+addId2+addId+addId3
  }
 
 
- //final total
+
 
 
  //copon code
-//  document.getElementById('copon-code-btn').addEventListener('click',function(){
-//      const coponCodeInput=document.getElementById('copon-code')
-//      const coponCodeInnerText=coponCodeInput.value
-//      if(coponCodeInnerText==tanvir){
-//          const finalTotal=document.getElementById('final-total')
-//          const finalTotalInnerText=finalTotal.innerText
-//          const finalTotalParseInt=parseInt(finalTotalInnerText)
-//          finalTotal.innerText=finalTotalParseInt-100
-//      }  
-//  })
+ document.getElementById('copon-code-btn').addEventListener('click',function(){
+     const coponCodeInput=document.getElementById('copon-code')
+     const coponCodeInnerText=coponCodeInput.value
+     if(coponCodeInnerText=='tanvir'){
+         const finalTotal=document.getElementById('final-total')
+         const finalTotalInnerText=finalTotal.innerText
+         const finalTotalParseInt=parseInt(finalTotalInnerText)
+         finalTotal.innerText=finalTotalParseInt-100
+     }  
+ })
+
